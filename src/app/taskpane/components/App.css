@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Arial";
+  background-color: var(--main-background);
+}
+
+.header {
+  color: var(--page-header-titles-color);
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  border: 1px solid #E5E5E5;
+  max-width: 300px;
+  padding: 6px 0;
+  text-align: center;
+  cursor: pointer;
+  /*width: 300px;*/
+  margin-bottom: 11px;
+  color: var(--title-color);
+  background-color: var(--btn-background);
+}
+
+.container {
+  height: 100vh;
+  background-color: var(--main-background);
+}
+
+.container.light {
+  --main-background: #ffffff;
+  --btn-background: #ffffff;
+  --btn-color: #ffffff;
+  --text-color: #262626;
+  --input-background: #ffffff;
+  --features-btn-color: #494949;
+  --title-color: #494949;
+  --label-color: #797979;
+  --cancel-btn-color: #5A5A5A;
+  --page-header-titles-color: #494949;
+}
+
+.container.dark {
+  --main-background: #262626;
+  --btn-background: #262626;
+  --btn-color: #262626;
+  --text-color: #ffffff;
+  --input-background: #363636;
+  --features-btn-color: #ffffff;
+  --title-color: #ffffff;
+  --label-color: #ffffff;
+  --cancel-btn-color: #ffffff;
+  --page-header-titles-color: #ffffff;
+}
+
+.container.darkGrey {
+  --main-background: #666666;
+  --btn-background: #666666;
+  --btn-color: #666666;
+  --text-color: #ffffff;
+  --input-background: #666666;
+  --features-btn-color: #ffffff;
+  --title-color: #ffffff;
+  --label-color: #ffffff;
+  --cancel-btn-color: #ffffff;
+  --page-header-titles-color: #ffffff;
+}
+
+.dark .features > div > img {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.dark .cvContainer > div {
+  color: var(--title-color) !important;
+}
+

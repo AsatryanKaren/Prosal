@@ -1,0 +1,89 @@
+.App {
+  min-height: 400px;
+}
+.container {
+}
+
+.linkedinAnyPage {
+  margin: 130px 15px 32px;
+  padding: 0 21px;
+  text-align: center;
+  color: #494949;
+  font-weight: 400;
+}
+
+.linkedinAnyPage span {
+  font-weight: 600;
+}
+
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #00377B;
+  font-size: 16px;
+  height: 55px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.raiserWhite {
+  width: 85px;
+  height: 20px;
+}
+
+.profilePicture {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+
+/* User Card Styles */
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  background-color: #fff;
+  padding: 20px 0;
+  margin: 0 10px;
+  border-bottom: none;
+}
+
+.profileImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Additional Styles */
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.linkedinName{
+  font-family: Segoe UI,Arial;
+  font-size: 14px;
+}
+
+.position {
+  color: #494949;
+  font-family: Segoe UI,Arial;
+  font-size: 12px;
+}
+
+.location {
+  color: #909090;
+  font-size: 12px;
+}
+
