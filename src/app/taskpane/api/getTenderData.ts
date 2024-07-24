@@ -32,6 +32,7 @@ export function getTenderData(token: any, id: any) {
         timeline: result.data.project_timeline,
         postDate: result.data.post_date,
         category: result.data.category,
+        deadline: result.data.deadline
       };
 
       return tender;

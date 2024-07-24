@@ -5,19 +5,9 @@ import FeaturesWall from '../../app/taskpane/components/FeaturesWall/FeaturesWal
 
 const Popup = () => {
   const [additionalData, setAdditionalData] = useState({
-    headline: '',
-    address: '',
-    id: "ajax:3326659609759597861",
-    name: '',
     url: '',
-    img: '',
-    accessToken: '',
-    refreshToken: '',
-    isLoggedInLinkedin: '',
-    connectionToken: '',
-    replacerToken: ''
+    token: '',
   });
-  const [hideFeaturesWall, setHideFeaturesWall] = React.useState(false);
 
   useEffect(() => {
     function getContentData() {
@@ -27,17 +17,7 @@ const Popup = () => {
           console.log({data});
           setAdditionalData(prev => ({
             ...prev,
-            headline: data?.headline,
-            address: data?.address,
-            id: data?.id,
-            name: data?.fullName,
-            img: data?.img,
             url: data?.url,
-            isLoggedInLinkedin: data?.isLoggedInLinkedin,
-            connectionToken: data?.connectionToken,
-            accessToken: data?.accessToken,
-            refreshToken: data?.refreshToken,
-            replacerToken: data?.replacerToken,
             token: data?.token
           }));
         });
@@ -61,7 +41,7 @@ const Popup = () => {
     <div className="App">
       <div className='container'>
         <ErrorContextProvider>
-          <FeaturesWall additionalData={additionalData} setHideFeaturesWall={setHideFeaturesWall} />
+          <FeaturesWall additionalData={additionalData} />
         </ErrorContextProvider>
       </div>
     </div>

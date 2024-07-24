@@ -1,4 +1,4 @@
-export function sendToken(token: string, id: string | null) {
+export function analyze(token: string, id: string | null) {
   const redirectUri = typeof chrome !== "undefined" && chrome.identity ?
     chrome.identity.getRedirectURL() :
     `${window.location.origin}/index.html`;
@@ -23,7 +23,8 @@ export function sendToken(token: string, id: string | null) {
     .then(result => {
       const analyzedResult = {
         mismatch: result.mismatches[0],
-        reason: result.reason
+        reason: result.reason,
+        matches: result.matches
       }
       console.log({analyzedResult})
 
