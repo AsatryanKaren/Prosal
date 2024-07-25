@@ -32,10 +32,40 @@ export function getTenderData(token: any, id: any) {
         timeline: result.data.project_timeline,
         postDate: result.data.post_date,
         category: result.data.category,
-        deadline: result.data.deadline
+        deadline: result.data.submission_deadline
       };
 
       return tender;
+    })
+    .catch(error => {
+      // Handle errors
+      console.error('Fetch error:', error.message);
+    });
+}
+
+export function getAnalyzedHistory(id: any) {
+  const postUrl = `https://tendersaiapi.volo.global/Tenders/${id}/results-history`;
+
+  return fetch(postUrl, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(result => {
+      console.log({result})
+
+      const analyzedHistory = {
+        history: result.results,
+      };
+
+      return analyzedHistory;
     })
     .catch(error => {
       // Handle errors

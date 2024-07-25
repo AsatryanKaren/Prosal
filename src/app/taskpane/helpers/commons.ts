@@ -70,3 +70,14 @@ export function extractIdFromUrl(url:string) {
   let match = url?.match(/individualRfp\/([a-zA-Z0-9]+)/);
   return match ? match[1] : null;
 }
+
+export function isDateMoreThan15DaysAway(givenDate:any) {
+  const today = new Date();
+
+  const futureDate = new Date();
+  futureDate.setDate(today.getDate() + 15);
+
+  const parsedDate = new Date(givenDate);
+
+  return parsedDate > futureDate;
+}

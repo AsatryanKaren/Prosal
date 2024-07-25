@@ -83,9 +83,10 @@
   border-radius: 5px;
 }
 
-.pending {
+.disable {
   opacity: 0.5;
   cursor: default;
+  pointer-events: none;
 }
 
 .loader {
@@ -102,3 +103,32 @@
   margin: 0 auto;
 }
 @keyframes l7 {to{transform: rotate(.5turn)}}
+
+
+.historyContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.details {
+  margin-bottom: 5px;
+  border-radius: 8px;
+  padding: 10px 10px 10px 0;
+}
+
+.summary {
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #858505;
+}
+
+.summary > div:hover {
+
+}
