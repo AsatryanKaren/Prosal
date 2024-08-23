@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Prosal Analyzer",
-  "description": "Analyze Prosal Tenders",
+  "name": "Tenders Analyzer",
+  "description": "Analyze Tenders",
   "background": { "service_worker": "background.bundle.js" },
   "action": {
     "default_popup": "popup.html",

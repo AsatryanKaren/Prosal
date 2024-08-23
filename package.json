@@ -1,7 +1,7 @@
 {
-  "name": "prosal-extension",
+  "name": "volo-extension",
   "version": "1.0.0",
-  "description": "Analyze Prosal Tenders",
+  "description": "Analyze Tenders",
   "license": "MIT",
   "scripts": {
     "build": "node utils/build.js",
